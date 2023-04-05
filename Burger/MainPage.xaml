@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Burger.MainPage">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal" Background="#ffc700" Grid.Row="0">
+                <Label Text="Добавить в заказ" TextColor="Black" FontSize="22" VerticalOptions="Center" Margin="40,0"/>
+            </StackLayout>
+        <StackLayout Grid.Row="1" Background="white" Orientation="Vertical" >
+            <Picker x:Name="languagePicker" Title = "Тип мяса:" TitleColor="Black" HorizontalOptions="Start" Background="grey"  >
+                <Picker.Items>
+                    <x:String>Говядина</x:String>
+                    <x:String>Свинина</x:String>
+                    <x:String>Курица</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Background="White" Orientation="Horizontal">
+            <Label Text="Дополнительно: " TextColor="Black" FontSize="12" VerticalOptions="Center" Margin="40,0"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
